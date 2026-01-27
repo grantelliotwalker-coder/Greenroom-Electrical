@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+                           <!-- Tells the browser this is an HTML5 document -->
+<html lang="en">
+                          <!-- Root element; lang="en" sets language to English -->
+
+<head>
+    <!-- Head = page settings, not visible content -->
+    <meta charset="UTF-8" />             <!-- Use Unicode so all characters display correctly -->
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <!-- Makes layout match the device width and start at normal zoom,
+         so your CSS (including 18px base font) looks correct on phones [web:5][web:61] -->
+
+    <title>GRANT WALKER</title>        <!-- Text shown in the browser tab [web:83][web:93] -->
+    <!-- Link to your own CSS file.
+         rel="stylesheet" says “this file is a stylesheet”,
+         href="Styles.css" is the path to it. [web:84][web:88][web:96] -->
+    <link rel="stylesheet" href="Styles.css" />
+
+    <!-- Load Open Sans font (weights 400,600,700) from Google Fonts.
+         Your CSS uses "Open Sans" as the main font-family. [web:83][web:86] -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" />
+
+    <!-- Load both Open Sans and Roboto.
+         Roboto is used for the .logo class in your stylesheet. [web:83][web:86] -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap" />
+</head>
+
+<body>
+    <!-- Everything inside <body> is styled by your CSS and shown on screen [web:83][web:90] -->
+    <!-- Top bar: styled by .top-bar, .logo, .top-nav, .hamburger in Styles.css ggh-->
+    <header class="top-bar">
+        <div class="top-bar-left">
+            <a href="Home.html" class="logo">GRANT WALKER</a>
+            <p class="tagline">Music Producer from Australia</p>
+        </div>
+
+        <nav class="top-nav">
+            <a href="Home.html" aria-current="page">Home</a>
+            <a href="posts.html">Music</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+
+
+
+    <!-- Slide‑out side navigation drawer.
+         CSS .side-nav positions it off-screen; .side-nav.open slides it in. [web:89][web:92] -->
+    <aside class="side-nav" id="sideNav">
+        <a href="Home.html">Home</a>
+        <a href="posts.html">Posts</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+    </aside>
+
+    <!-- Main content area, centered by .content in Styles.css -->
+    <main class="content">
+        <section class="hero">
+            <div class="hero-inner">
+                <h1>Grant Walker</h1>
+                <p class="hero-subtitle">
+                    Music Producer and Instrumentalist from Australia.
+                </p>
+                <p>
+                    <a class="primary-button" href="posts.html">View Discography</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- JavaScript to control hamburger and side nav behaviour -->
+    <script>
+        const hamburger = document.getElementById('hamburger');  // Get the hamburger button
+        const sideNav = document.getElementById('sideNav');      // Get the side nav drawer
+
+        // When hamburger is clicked, toggle the "open" class on the side nav
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation();             // Stop the click from reaching the document
+            sideNav.classList.toggle('open');    // Add/remove .open, which slides the nav in/out
+        });
+
+        // If you click on the empty area of the side nav, close it
+        sideNav.addEventListener('click', (event) => {
+            if (event.target === sideNav) {      // Only when clicking the aside background
+                sideNav.classList.remove('open');
+            }
+            event.stopPropagation();             // Do not let this click close it immediately
+        });
+
+        // Click anywhere else on the page to close the side nav
+        document.addEventListener('click', () => {
+            sideNav.classList.remove('open');    // Remove .open so CSS moves it off-screen again
+        });
+    </script>
+
+    <footer class="site-footer">
+        <p>© 2025 Grant Walker · All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

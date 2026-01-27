@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+                           <!-- Declare this document is HTML5 -->
+<html lang="en">
+                          <!-- Root element; language is English -->
+
+<head>
+    <!-- Head: metadata, title, styles, fonts -->
+    <meta charset="UTF-8" />             <!-- Use UTF‑8 so all characters render correctly -->
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <!-- Makes layout match the device width and start at normal zoom,
+         so your CSS (including 18px base font) looks correct on phones [web:5][web:61] -->
+
+    <!-- Page title: shown in browser tab and search results -->
+    <title>GRANT WALKER</title>
+
+    <!-- Your main CSS file.
+         All classes like .top-bar, .logo, .post, etc. are defined in Styles.css -->
+    <link rel="stylesheet" href="Styles.css" />
+
+    <!-- Google Fonts: Open Sans (weights 400, 600, 700).
+         This matches the "Open Sans" family used in body text in Styles.css. -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" />
+
+    <!-- Google Fonts: Open Sans + Roboto 500.
+         Roboto 500 is what your .logo class uses for the GRANT WALKER text. -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap" />
+</head>
+
+<body>
+    <!-- Visible page content starts here -->
+    <!-- ===== Header / top navigation ===== -->
+    <!-- Entire top bar: layout, spacing, colours come from .top-bar in Styles.css -->
+    <header class="top-bar">
+        <div class="top-bar-left">
+            <a href="Home.html" class="logo">GRANT WALKER</a>
+            <p class="tagline">Music Producer from Australia</p>
+        </div>
+
+        <nav class="top-nav">
+            <a href="Home.html" aria-current="page">Home</a>
+            <a href="posts.html">Music</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- ===== Slide‑out side navigation (mobile) ===== -->
+    <!-- Side drawer; positioned off‑screen by .side-nav, and slides in when .open is added.
+         Links share styling with .side-nav a in your Styles.css. -->
+    <aside class="side-nav" id="sideNav">
+        <a href="Home.html">Home</a>
+        <a href="posts.html">Posts</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+    </aside>
+
+    <!-- ===== Main content area ===== -->
+    <!-- .content centres everything and limits width (max-width: 900px in Styles.css) -->
+    <main class="content">
+
+        <!-- One blog post “card”.
+         .post applies the card background, padding, border radius, centering, etc. -->
+        <article class="post">
+            <!-- Clickable album cover -->
+            <a href="https://open.spotify.com/album/2Fn9i9Jtky5h04fylEMEsD?si=YRn1FjWHQl60crEss1-6mQ"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="Images/ColourBlind.jpg"
+                     alt="Album cover for Colour Blind Album"
+                     class="post-cover" />
+            </a>
+
+            <!-- Clickable title going to the same album -->
+            <h1>
+                <a href="https://open.spotify.com/album/2Fn9i9Jtky5h04fylEMEsD?si=YRn1FjWHQl60crEss1-6mQ"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Colour Blind
+                </a>
+            </h1>
+
+            <p class="meta">Release Date - 3 Sep 2018</p>
+            <div class="about">
+                My debut album Colour Blind was recorded in Brisbane Australia
+                Click the cover or title to listen on Spotify.
+            </div>
+        </article>
+
+
+    </main>
+
+    <!-- ===== JavaScript for hamburger / side nav behaviour ===== -->
+
+    <script>
+        // Get references to the hamburger button and the side navigation drawer
+        const hamburger = document.getElementById('hamburger');
+        const sideNav = document.getElementById('sideNav');
+
+        // When the hamburger is clicked, toggle the "open" class on the side nav
+        // .side-nav.open in Styles.css moves it from off-screen (left:-240px) to visible (left:0)
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation();        // Prevent click from immediately triggering document click
+            sideNav.classList.toggle('open'); // Add/remove .open to show/hide the drawer
+        });
+
+        // If you click the blank background of the side nav, close it
+        sideNav.addEventListener('click', (event) => {
+            // Only close if the click was on the <aside> itself, not on a link
+            if (event.target === sideNav) {
+                sideNav.classList.remove('open');
+            }
+            // Stop this click from bubbling up and closing via the document listener
+            event.stopPropagation();
+        });
+
+        // Clicking anywhere else on the page closes the side nav
+        document.addEventListener('click', () => {
+            sideNav.classList.remove('open');  // Remove .open so CSS slides it back off-screen
+        });
+    </script>
+
+    <footer class="site-footer">
+        <p>© 2025 Grant Walker · All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

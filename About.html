@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+                           <!-- HTML5 document declaration -->
+<html lang="en">
+                          <!-- Root element; site language is English -->
+
+<head>
+    <!-- Page metadata, title, styles, and fonts -->
+    <meta charset="UTF-8" />             <!-- Use UTF‑8 encoding for text -->
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <!-- Makes layout match the device width and start at normal zoom,
+         so your CSS (including 18px base font) looks correct on phones [web:5][web:61] -->
+
+    <title>GRANT WALKER</title>        <!-- Text shown in the browser/tab title bar [web:83][web:99] -->
+    <!-- Main stylesheet with all your layout and colour rules
+         (classes like .top-bar, .logo, .post, .about, etc.). [web:84][web:97] -->
+    <link rel="stylesheet" href="Styles.css" />
+
+    <!-- Google Font: Open Sans (weights 400, 600, 700) for body text. [web:83][web:86] -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" />
+
+    <!-- Google Fonts: Open Sans + Roboto 500 (used for logo text via .logo). [web:83][web:86] -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap" />
+</head>
+
+<body>
+    <!-- All visible content lives inside <body> -->
+    <!-- ===== Header / top navigation bar ===== -->
+    <!-- Top bar layout; spacing and colours handled by .top-bar in Styles.css -->
+    <header class="top-bar">
+        <div class="top-bar-left">
+            <a href="Home.html" class="logo">GRANT WALKER</a>
+            <p class="tagline">Music Producer from Australia</p>
+        </div>
+
+        <nav class="top-nav">
+            <a href="Home.html" aria-current="page">Home</a>
+            <a href="posts.html">Music</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- ===== Slide‑out side navigation (mobile drawer) ===== -->
+    <!-- Side nav; positioned off‑screen by .side-nav, and moved into view by .side-nav.open. -->
+    <aside class="side-nav" id="sideNav">
+        <a href="Home.html">Home</a>
+        <a href="posts.html">Posts</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+    </aside>
+
+    <!-- ===== Main content: About section ===== -->
+    <!-- .content centres everything and limits the width (max-width in Styles.css). -->
+    <main class="content">
+        <!-- Card-style box; .post gives the coloured background, padding, radius and centering. -->
+        <section class="post">
+            <h1>ABOUT ME</h1>            <!-- Heading styled by .post h1 (colour, spacing) -->
+
+            <p class="meta"></p>         <!-- Optional meta line under the heading (empty here) -->
+            <!-- Main about text block.
+                 The .about class in Styles.css uses white-space: pre-line so your line breaks
+                 inside the HTML are respected and text stays nicely formatted. -->
+            <div class="about">
+                Hi, I’m Grant
+            </div>
+
+            <!-- Call‑to‑action button back to the home page.
+                 .primary-button controls colours, padding, hover effect. -->
+            <p>
+                <a class="primary-button" href="Home.html">View Home</a>
+            </p>
+        </section>
+    </main>
+
+    <!-- ===== JavaScript to control hamburger and side nav ===== -->
+
+    <script>
+        const hamburger = document.getElementById('hamburger');  // The hamburger button
+        const sideNav = document.getElementById('sideNav');      // The side drawer element
+
+        // When the hamburger is clicked, open or close the side nav
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation();                // Stop the click from reaching document
+            sideNav.classList.toggle('open');       // Toggle .open -> CSS slides drawer in/out
+        });
+
+        // If user clicks on the blank area of the side nav, close it
+        sideNav.addEventListener('click', (event) => {
+            // Only close when the click target is the <aside> itself, not a link
+            if (event.target === sideNav) {
+                sideNav.classList.remove('open');
+            }
+            // Stop the click from bubbling up and triggering the document listener
+            event.stopPropagation();
+        });
+
+        // Clicking anywhere else on the page closes the side nav
+        document.addEventListener('click', () => {
+            sideNav.classList.remove('open');       // Remove .open so CSS hides the drawer again
+        });
+    </script>
+
+    <footer class="site-footer">
+        <p>© 2025 Grant Walker · All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>
