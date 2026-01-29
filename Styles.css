@@ -32,6 +32,13 @@ main {
     flex: 1;
 }
 
+/* center main column on all pages */
+.content {
+    max-width: 960px;
+    margin: 2.5rem auto 3rem;
+    padding: 0 1.5rem;
+}
+
 /* ===== HEADER / NAV ===== */
 
 .top-bar {
@@ -167,7 +174,7 @@ main {
     left: 0;
 }
 
-/* ===== HERO ===== */
+/* ===== HERO (HOME) ===== */
 
 main.content {
     margin: 0;
@@ -247,12 +254,6 @@ main.content {
     font-size: 0.95rem;
     opacity: 0.9;
 }
-/* Center main column on all non-hero pages */
-.content {
-    max-width: 960px;
-    margin: 2.5rem auto 3rem;
-    padding: 0 1.5rem;
-}
 
 /* ===== FOOTER ===== */
 
@@ -323,14 +324,6 @@ main.content {
 
 /* ===== DEALS PAGE ===== */
 
-.deals-page {
-    max-width: 960px;
-    margin: 2.5rem auto 3rem;   /* centers the whole column */
-    padding: 0 1.5rem;
-    text-align: left;           /* keep text itself left-aligned */
-}
-
-/* optional: hard-center the header text only */
 .deals-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -348,8 +341,7 @@ main.content {
     color: var(--muted);
 }
 
-
-/* deal cards reuse .post look but slightly refined */
+/* deal cards */
 .post.deal-card {
     background-color: #ffffff;
     border-radius: 10px;
@@ -407,10 +399,6 @@ main.content {
 
 /* responsive tweaks for deals page */
 @media (max-width: 768px) {
-    .deals-page {
-        margin-top: 1.5rem;
-    }
-
     .deal-body {
         flex-direction: column;
         align-items: flex-start;
@@ -423,12 +411,6 @@ main.content {
 }
 
 /* ===== ABOUT PAGE ===== */
-
-.about-page {
-    max-width: 960px;
-    margin: 2.5rem auto 3rem;
-    padding: 0 1.5rem;
-}
 
 .about-card {
     background-color: #ffffff;
@@ -482,10 +464,6 @@ main.content {
 
 /* responsive tweaks */
 @media (max-width: 768px) {
-    .about-page {
-        margin-top: 1.5rem;
-    }
-
     .about-card {
         padding: 1.6rem 1.4rem 1.8rem;
     }
@@ -496,12 +474,6 @@ main.content {
 }
 
 /* ===== CONTACT PAGE ===== */
-
-.contact-page {
-    max-width: 960px;
-    margin: 2.5rem auto 3rem;
-    padding: 0 1.5rem;
-}
 
 .contact-card {
     background-color: #ffffff;
@@ -563,15 +535,7 @@ main.content {
 /* responsive tweaks */
 
 @media (max-width: 768px) {
-    .contact-page {
-        margin-top: 1.5rem;
-    }
-
     .contact-card {
         padding: 1.6rem 1.4rem 1.8rem;
     }
 }
-
-
-
-
