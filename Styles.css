@@ -486,4 +486,139 @@ main.content {
     }
 }
 
+/* ===== CONTACT PAGE ===== */
+
+.contact-page {
+    max-width: 960px;
+    margin: 2.5rem auto 3rem;
+    padding: 0 1.5rem;
+}
+
+.contact-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem 2.25rem 2.2rem;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.contact-header h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.contact-header p {
+    margin: 0 0 1.75rem;
+    font-size: 1rem;
+    color: var(--muted);
+}
+
+/* layout: details + form side by side on desktop */
+
+.contact-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr);
+    gap: 2rem;
+}
+
+/* details block */
+
+.contact-details h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.contact-details p {
+    margin: 0 0 0.4rem;
+    font-size: 0.98rem;
+    color: var(--text);
+}
+
+.contact-details a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* form */
+
+.contact-form {
+    width: 100%;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.9rem;
+}
+
+.field-group label {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.field-group input,
+.field-group textarea {
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    padding: 0.55rem 0.7rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out;
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(0, 104, 53, 0.18);
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+
+.contact-form .primary-button {
+    margin-top: 0.6rem;
+}
+
+/* small note text */
+
+.contact-note {
+    margin-top: 1.75rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+/* responsive tweaks */
+
+@media (max-width: 768px) {
+    .contact-page {
+        margin-top: 1.5rem;
+    }
+
+    .contact-card {
+        padding: 1.6rem 1.4rem 1.8rem;
+    }
+
+    .contact-body {
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
+    }
+
+    .field-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 
