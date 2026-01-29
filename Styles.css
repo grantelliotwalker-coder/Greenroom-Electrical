@@ -2,16 +2,16 @@
 
 :root { /* :root = top-level element; good place to store global variables */
     --bg: #FFFFFF; /* page background */ /* Custom property for overall page background color */
-    --surface: #2596be; /* cards / posts */ /* Color for card/post backgrounds */
+    --surface: #006835; /* cards / posts */ /* Color for card/post backgrounds */
     --text: #000000; /* main text */ /* Main text color if you want light text */
     --muted: #000000; /* meta text */ /* Lighter text color for meta/info text */
     --white: #FFFFFF; /* meta text */ /* Lighter text color for meta/info text */
-    --accent: #2596be; /* , logo, active link */ /* Accent color, used for important text/links */
+    --accent: #006835; /* , logo, active link */ /* Accent color, used for important text/links */
     --black: #000000; /*/Black*/ /* Plain black color, stored as a variable */
-    --logo: #2596be; /* , logo, active link */ /* Color used specifically for the logo text */
-    --button: #2596be; /* buttons, logo, active link */ /* Main button background color */
-    --accent-soft: #2596be; /* hover color */ /* Slightly different red for hover states */
-    --header: #2596be;/* top bar + side nav */ /* Color intended for header/side nav if needed */
+    --logo: #006835; /* , logo, active link */ /* Color used specifically for the logo text */
+    --button: #006835; /* buttons, logo, active link */ /* Main button background color */
+    --accent-soft: #006835; /* hover color */ /* Slightly different red for hover states */
+    --header: #006835;/* top bar + side nav */ /* Color intended for header/side nav if needed */
 }
 
 /* Global */ /* Section for global (page‑wide) styles */
