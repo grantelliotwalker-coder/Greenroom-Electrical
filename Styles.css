@@ -2,16 +2,16 @@
 
 :root { /* :root = top-level element; good place to store global variables */
     --bg: #FFFFFF; /* page background */ /* Custom property for overall page background color */
-    --surface: #694D75; /* cards / posts */ /* Color for card/post backgrounds */
+    --surface: #2596be; /* cards / posts */ /* Color for card/post backgrounds */
     --text: #000000; /* main text */ /* Main text color if you want light text */
     --muted: #000000; /* meta text */ /* Lighter text color for meta/info text */
     --white: #FFFFFF; /* meta text */ /* Lighter text color for meta/info text */
-    --accent: #000000; /* , logo, active link */ /* Accent color, used for important text/links */
+    --accent: #2596be; /* , logo, active link */ /* Accent color, used for important text/links */
     --black: #000000; /*/Black*/ /* Plain black color, stored as a variable */
     --logo: #000000; /* , logo, active link */ /* Color used specifically for the logo text */
     --button: #9877A6; /* buttons, logo, active link */ /* Main button background color */
-    --accent-soft: #B49CBF; /* hover color */ /* Slightly different red for hover states */
-    --header: #d1e5ed; /* top bar + side nav */ /* Color intended for header/side nav if needed */
+    --accent-soft: #2596be; /* hover color */ /* Slightly different red for hover states */
+    --header: #FFFFFF; /* top bar + side nav */ /* Color intended for header/side nav if needed */
 }
 
 /* Global */ /* Section for global (page‑wide) styles */
