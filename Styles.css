@@ -247,6 +247,12 @@ main.content {
     font-size: 0.95rem;
     opacity: 0.9;
 }
+/* Center main column on all non-hero pages */
+.content {
+    max-width: 960px;
+    margin: 2.5rem auto 3rem;
+    padding: 0 1.5rem;
+}
 
 /* ===== FOOTER ===== */
 
