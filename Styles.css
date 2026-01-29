@@ -89,6 +89,12 @@ main.content {
     margin-right: 1rem; /* NEW: gap between logo and nav/hamburger */
 }
 
+.logo img {
+    height: 40px;   /* tweak to suit */
+    width: auto;
+    display: block;
+}
+
 .top-nav a { /* Styles for each top navigation link */
     color: var(--white); /* Link text color set to black */
     text-decoration: none; /* Removes default underline */
