@@ -32,14 +32,21 @@ main {
     flex: 1;
 }
 
-/* center main column on all pages */
+/* center inner pages (Deals, About, Contact) */
 .content {
     max-width: 960px;
     margin: 2.5rem auto 3rem;
     padding: 0 1.5rem;
 }
 
-/* ===== HEADER / NAV ===== */
+/* Home only: let hero go full width */
+.home-page {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== HEADER / NAV ========== */
 
 .top-bar {
     position: sticky;
@@ -54,14 +61,12 @@ main {
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-/* left cluster */
 .top-bar-left {
     display: flex;
     align-items: center;
     gap: 0.75rem;
 }
 
-/* logo: image + wordmark */
 .logo {
     display: flex;
     align-items: center;
@@ -86,7 +91,6 @@ main {
     margin: 0;
 }
 
-/* nav links */
 .top-nav {
     flex: 1;
     display: flex;
@@ -103,7 +107,6 @@ main {
     text-decoration: none;
 }
 
-/* subtle underline hover */
 .top-nav a::after {
     content: "";
     position: absolute;
@@ -142,7 +145,7 @@ main {
     border-radius: 999px;
 }
 
-/* ===== SIDE NAV (MOBILE DRAWER) ===== */
+/* ========== SIDE NAV (MOBILE) ========== */
 
 .side-nav {
     position: fixed;
@@ -174,12 +177,7 @@ main {
     left: 0;
 }
 
-/* ===== HERO (HOME) ===== */
-
-main.content {
-    margin: 0;
-    padding: 0;
-}
+/* ========== HERO (HOME) ========== */
 
 .hero {
     position: relative;
@@ -197,17 +195,16 @@ main.content {
 
 .hero-inner {
     max-width: 720px;
+    margin: 0 auto;   /* centers text block inside hero */
     width: 100%;
 }
 
-/* big clean title */
 .hero h1 {
     margin: 0 0 0.75rem;
     font-size: 2.8rem;
     letter-spacing: 0.02em;
 }
 
-/* supporting line */
 .hero-subtitle {
     margin: 0 0 1.5rem;
     font-size: 1.15rem;
@@ -215,7 +212,6 @@ main.content {
     opacity: 0.9;
 }
 
-/* CTA group */
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
@@ -223,7 +219,8 @@ main.content {
     align-items: center;
 }
 
-/* primary button */
+/* ========== BUTTONS ========== */
+
 .primary-button {
     display: inline-block;
     padding: 0.8rem 1.9rem;
@@ -249,13 +246,12 @@ main.content {
     color: #ffffff;
 }
 
-/* secondary text in hero */
 .hero-secondary {
     font-size: 0.95rem;
     opacity: 0.9;
 }
 
-/* ===== FOOTER ===== */
+/* ========== FOOTER ========== */
 
 .site-footer {
     text-align: center;
@@ -271,7 +267,7 @@ main.content {
     margin: 0;
 }
 
-/* ===== MOBILE ===== */
+/* ========== MOBILE GLOBAL ========== */
 
 @media (max-width: 768px) {
     .top-bar {
@@ -301,7 +297,6 @@ main.content {
     .hero {
         min-height: 60vh;
         padding: 4rem 1.25rem 4rem;
-        text-align: left;
     }
 
     .hero h1 {
@@ -322,7 +317,7 @@ main.content {
     }
 }
 
-/* ===== DEALS PAGE ===== */
+/* ========== DEALS PAGE ========== */
 
 .deals-header {
     text-align: center;
@@ -341,7 +336,6 @@ main.content {
     color: var(--muted);
 }
 
-/* deal cards */
 .post.deal-card {
     background-color: #ffffff;
     border-radius: 10px;
@@ -364,7 +358,6 @@ main.content {
     color: var(--muted);
 }
 
-/* body of the deal: list + button */
 .deal-body {
     display: flex;
     flex-wrap: wrap;
@@ -384,12 +377,10 @@ main.content {
     margin-top: 0.3rem;
 }
 
-/* reuse primary-button, just allow in-card alignment */
 .deal-body .primary-button {
     flex-shrink: 0;
 }
 
-/* note at bottom of page */
 .deals-note {
     margin-top: 1.25rem;
     font-size: 0.9rem;
@@ -397,7 +388,6 @@ main.content {
     line-height: 1.5;
 }
 
-/* responsive tweaks for deals page */
 @media (max-width: 768px) {
     .deal-body {
         flex-direction: column;
@@ -410,7 +400,7 @@ main.content {
     }
 }
 
-/* ===== ABOUT PAGE ===== */
+/* ========== ABOUT PAGE ========== */
 
 .about-card {
     background-color: #ffffff;
@@ -462,7 +452,6 @@ main.content {
     text-decoration: underline;
 }
 
-/* responsive tweaks */
 @media (max-width: 768px) {
     .about-card {
         padding: 1.6rem 1.4rem 1.8rem;
@@ -473,7 +462,7 @@ main.content {
     }
 }
 
-/* ===== CONTACT PAGE ===== */
+/* ========== CONTACT PAGE ========== */
 
 .contact-card {
     background-color: #ffffff;
@@ -531,8 +520,6 @@ main.content {
     font-size: 0.85rem;
     color: var(--muted);
 }
-
-/* responsive tweaks */
 
 @media (max-width: 768px) {
     .contact-card {
