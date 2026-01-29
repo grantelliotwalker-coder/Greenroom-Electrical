@@ -8,8 +8,10 @@
     />
     <title>Greenroom Electrical</title>
 
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="Styles.css" />
 
+    <!-- Fonts -->
     <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
@@ -21,6 +23,7 @@
 </head>
 
 <body>
+    <!-- HEADER -->
     <header class="top-bar">
         <div class="top-bar-left">
             <a href="Home.html" class="logo">
@@ -44,6 +47,7 @@
         </button>
     </header>
 
+    <!-- MOBILE SIDE NAV -->
     <aside class="side-nav" id="sideNav">
         <a href="Home.html">Home</a>
         <a href="posts.html">Deals</a>
@@ -51,22 +55,28 @@
         <a href="Contact.html">Contact</a>
     </aside>
 
+    <!-- HERO -->
     <main class="content">
         <section class="hero">
             <div class="hero-inner">
                 <h1>Greenroom Electrical</h1>
-                <p class="hero-subtitle">Electrician</p>
-                <p>
-                    <a class="primary-button" href="posts.html">View Deals</a>
+                <p class="hero-subtitle">
+                    Reliable residential and commercial electrical services across the Clarence Valley.
                 </p>
+                <div class="hero-actions">
+                    <a class="primary-button" href="posts.html">View Current Deals</a>
+                    <p class="hero-secondary">Need urgent help? Call now.</p>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
         <p>© 2026 Greenroom Electrical · All rights reserved.</p>
     </footer>
 
+    <!-- NAV SCRIPT -->
     <script>
         const hamburger = document.getElementById("hamburger");
         const sideNav = document.getElementById("sideNav");
