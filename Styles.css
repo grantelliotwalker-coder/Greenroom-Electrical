@@ -8,10 +8,10 @@
     --white: #FFFFFF; /* meta text */ /* Lighter text color for meta/info text */
     --accent: #2596be; /* , logo, active link */ /* Accent color, used for important text/links */
     --black: #000000; /*/Black*/ /* Plain black color, stored as a variable */
-    --logo: #000000; /* , logo, active link */ /* Color used specifically for the logo text */
-    --button: #9877A6; /* buttons, logo, active link */ /* Main button background color */
+    --logo: #2596be; /* , logo, active link */ /* Color used specifically for the logo text */
+    --button: #2596be; /* buttons, logo, active link */ /* Main button background color */
     --accent-soft: #2596be; /* hover color */ /* Slightly different red for hover states */
-    --header: #FFFFFF; /* top bar + side nav */ /* Color intended for header/side nav if needed */
+    --header: #2596be;/* top bar + side nav */ /* Color intended for header/side nav if needed */
 }
 
 /* Global */ /* Section for global (page‑wide) styles */
@@ -84,7 +84,7 @@ main.content {
     font-weight: 500; /* Medium */ /* Medium font weight (overridden by bold below) */
     font-size: 2.5rem; /* Large font size for the logo */
     font-weight: bold; /* Makes logo text bold */
-    color: var(--white); /* Uses logo color variable (black) */
+    color: var(--logo); /* Uses logo color variable (black) */
     text-decoration: none; /* Removes underline from the logo link */
     margin-right: 1rem; /* NEW: gap between logo and nav/hamburger */
 }
@@ -96,18 +96,18 @@ main.content {
 }
 
 .top-nav a { /* Styles for each top navigation link */
-    color: var(--white); /* Link text color set to black */
+    color: var(--accent); /* Link text color set to black */
     text-decoration: none; /* Removes default underline */
     margin-left: 1rem; /* Adds space between each nav link */
     font-size: 0.95rem; /* Slightly smaller than base font size */
 }
 
     .top-nav a[aria-current="page"] { /* Style for the link representing current page */
-        color: var(--white); /* Uses accent color to highlight current page link */
+        color: var(--accent); /* Uses accent color to highlight current page link */
     }
 
     .top-nav a:hover { /* Hover state for nav links */
-        color: var(--white); /* Changes color on hover for feedback */
+        color: var(--accent); /* Changes color on hover for feedback */
     }
 
 /* Hamburger button (for small screens) */
@@ -132,7 +132,7 @@ main.content {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: var(--white);
+    background-color: var(--accent);
     border-radius: 2px;
 }
 
