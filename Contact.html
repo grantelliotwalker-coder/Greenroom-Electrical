@@ -1,120 +1,134 @@
-﻿<!DOCTYPE html>
-                           <!-- Tell the browser this is an HTML5 document -->
+<!DOCTYPE html>
 <html lang="en">
-                          <!-- Root element; page language is English -->
-
 <head>
-    <!-- Head: title, metadata, styles, fonts -->
-    <meta charset="UTF-8" />             <!-- Use UTF‑8 so all characters display correctly -->
+    <meta charset="UTF-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+    <title>Contact · Greenroom Electrical</title>
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <!-- Make layout match the device width and start at normal zoom
-         so your CSS (including 18px base font) looks correct on phones -->
-
-    <title>GRANT WALKER</title>        <!-- Text shown in the browser tab -->
-    <!-- Main stylesheet with all your layout, colours, and typography
-         (classes like .top-bar, .logo, .content, .post, .about, .primary-button). -->
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="Styles.css" />
 
-    <!-- Google Font: Open Sans (weights 400, 600, 700) for body text. -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" />
-
-    <!-- Google Fonts: Open Sans + Roboto 500 (used for the logo text via .logo). -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap" />
+    <!-- Fonts -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+    />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap"
+    />
 </head>
 
 <body>
-    <!-- All visible content goes inside <body> -->
-    <!-- ===== Header / top navigation ===== -->
-    <!-- Top bar container; styled by .top-bar (flex layout, padding, border). -->
+    <!-- HEADER -->
     <header class="top-bar">
         <div class="top-bar-left">
-            <a href="Home.html" class="logo">GRANT WALKER</a>
-            <p class="tagline">Music Producer from Australia</p>
+            <a href="Home.html" class="logo">
+                <img src="greenroom-electrical.jpg" alt="Greenroom Electrical logo" />
+                <span>Greenroom Electrical</span>
+            </a>
+            <p class="tagline">Your Local Electrician</p>
         </div>
 
         <nav class="top-nav">
-            <a href="Home.html" aria-current="page">Home</a>
-            <a href="posts.html">Music</a>
+            <a href="Home.html">Home</a>
+            <a href="posts.html">Deals</a>
             <a href="About.html">About</a>
-            <a href="Contact.html">Contact</a>
+            <a href="Contact.html" aria-current="page">Contact</a>
         </nav>
 
-        <button class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
             <span></span>
             <span></span>
             <span></span>
         </button>
     </header>
 
-    <!-- ===== Side navigation drawer (for mobile) ===== -->
-    <!-- Side nav; positioned off-screen by .side-nav and slid in with .side-nav.open. -->
+    <!-- MOBILE SIDE NAV -->
     <aside class="side-nav" id="sideNav">
         <a href="Home.html">Home</a>
-        <a href="posts.html">Music</a>
+        <a href="posts.html">Deals</a>
         <a href="About.html">About</a>
         <a href="Contact.html">Contact</a>
     </aside>
 
-    <!-- ===== Main content: Contact section ===== -->
-    <!-- .content centres everything and limits the width (max-width in Styles.css). -->
-    <main class="content">
-        <!-- Card-style wrapper; .post gives coloured background, padding, rounded corners. -->
-        <section class="post">
-            <h1>CONTACT</h1>            <!-- Heading styled by .post h1 (colour, spacing) -->
+    <!-- MAIN CONTENT -->
+    <main class="content contact-page">
+        <section class="contact-card">
+            <header class="contact-header">
+                <h1>Contact Greenroom Electrical</h1>
+                <p>Send an enquiry and we’ll get back to you as soon as possible.</p>
+            </header>
 
-            <p class="meta"></p>        <!-- Optional small meta text (empty for now) -->
-            <!-- Main contact text.
-                 The .about class uses white-space: pre-line and centering in your CSS,
-                 so the message is easy to read and nicely formatted. -->
-            <div class="about">
-                <p>
-                    I'd love to hear from you!
-                    Please reach out via email to ...@gmail.com
-                </p>
+            <div class="contact-body">
+                <div class="contact-details">
+                    <h2>Details</h2>
+                    <p><strong>Phone:</strong> <a href="tel:0400000000">0400 000 000</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@greenroomelectrical.com.au">info@greenroomelectrical.com.au</a></p>
+                    <p><strong>Service area:</strong> Clarence Valley and surrounds</p>
+                </div>
+
+                <form class="contact-form">
+                    <div class="field-group">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" placeholder="Your name" />
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email" placeholder="you@example.com" />
+                        </div>
+                        <div class="field-group">
+                            <label for="phone">Phone</label>
+                            <input id="phone" type="tel" name="phone" placeholder="Best contact number" />
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="message">How can we help?</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Briefly describe the work or issue"></textarea>
+                    </div>
+
+                    <button type="submit" class="primary-button">Send Enquiry</button>
+                </form>
             </div>
 
-            <!-- Call‑to‑action button back to the home page.
-                 .primary-button controls colours, padding, hover effect. -->
-            <p>
-                <a class="primary-button" href="Home.html">View Home</a>
+            <p class="contact-note">
+                This form does not send anywhere yet. You can replace it later with your own form
+                handler or booking system.
             </p>
         </section>
     </main>
 
-    <!-- ===== JavaScript to control hamburger and side nav ===== -->
-
-    <script>
-        const hamburger = document.getElementById('hamburger'); // Hamburger button element
-        const sideNav = document.getElementById('sideNav');     // Side navigation drawer
-
-        // When the hamburger is clicked, open/close the side nav
-        hamburger.addEventListener('click', (event) => {
-            event.stopPropagation();               // Keep the click from immediately closing it
-            sideNav.classList.toggle('open');      // Toggle .open so CSS slides it in/out
-        });
-
-        // Clicking the blank area of the side nav closes it, but links still work
-        sideNav.addEventListener('click', (event) => {
-            // Only close when the click is directly on the <aside>, not on a link
-            if (event.target === sideNav) {
-                sideNav.classList.remove('open');
-            }
-            event.stopPropagation();               // Prevent bubbling to document click handler
-        });
-
-        // Click anywhere else on the page to close the side nav
-        document.addEventListener('click', () => {
-            sideNav.classList.remove('open');      // Remove .open so CSS hides the drawer again
-        });
-    </script>
-
+    <!-- FOOTER -->
     <footer class="site-footer">
-        <p>© 2025 Grant Walker · All rights reserved.</p>
+        <p>© 2026 Greenroom Electrical · All rights reserved.</p>
     </footer>
 
+    <!-- NAV SCRIPT -->
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const sideNav = document.getElementById("sideNav");
+
+        hamburger.addEventListener("click", (event) => {
+            event.stopPropagation();
+            sideNav.classList.toggle("open");
+        });
+
+        sideNav.addEventListener("click", (event) => {
+            if (event.target === sideNav) {
+                sideNav.classList.remove("open");
+            }
+            event.stopPropagation();
+        });
+
+        document.addEventListener("click", () => {
+            sideNav.classList.remove("open");
+        });
+    </script>
 </body>
 </html>
