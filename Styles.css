@@ -1,40 +1,129 @@
-﻿/* Theme variables */ /* Section comment describing what this block is for */
+/* ========== THEME ========== */
 
-:root { /* :root = top-level element; good place to store global variables */
-    --bg: #FFFFFF; /* page background */ /* Custom property for overall page background color */
-    --surface: #006835; /* cards / posts */ /* Color for card/post backgrounds */
-    --text: #000000; /* main text */ /* Main text color if you want light text */
-    --muted: #000000; /* meta text */ /* Lighter text color for meta/info text */
-    --white: #FFFFFF; /* meta text */ /* Lighter text color for meta/info text */
-    --accent: #006835; /* , logo, active link */ /* Accent color, used for important text/links */
-    --black: #000000; /*/Black*/ /* Plain black color, stored as a variable */
-    --logo: #006835; /* , logo, active link */ /* Color used specifically for the logo text */
-    --button: #006835; /* buttons, logo, active link */ /* Main button background color */
-    --accent-soft: #006835; /* hover color */ /* Slightly different red for hover states */
-    --header: #006835;/* top bar + side nav */ /* Color intended for header/side nav if needed */
+:root {
+    --bg: #ffffff;
+    --surface: #006835;
+    --text: #000000;
+    --muted: #555555;
+    --accent: #006835;
+    --header-bg: #ffffff;
+    --button: #006835;
+    --button-hover: #00512a;
+    --border-subtle: #2a3a4a;
 }
 
-/* Global */ /* Section for global (page‑wide) styles */
+/* ========== GLOBAL ========== */
 
-html { /* Root HTML element */
-    font-size: 18px; /* try 18–20px; 1rem = 18px now */ /* Sets base font size so 1rem = 18px */
+html {
+    font-size: 18px;
 }
 
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background-color: var(--bg);
-    color: var(--white);
-    font-size: 1rem;
-    min-height: 100vh; /* full viewport height */
-    display: flex; /* stack header, main, footer vertically */
-    flex-direction: column;
+    color: var(--text);
 }
-/* make main wrapper not constrain hero */
-main.content {
+
+main {
     flex: 1;
-    max-width: none; /* override the 900px limit for the hero page */
-    margin: 0; /* remove side margins */
+}
+
+/* ========== HEADER / NAV ========== */
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+/* left cluster: logo + tagline */
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* logo link containing image + text */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.logo img {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+
+/* tagline under/next to logo */
+.tagline {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0;
+}
+
+/* top navigation (desktop) */
+.top-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.top-nav a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.top-nav a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+.top-nav a:hover {
+    color: var(--button-hover);
+}
+
+/* hamburger (always present, but hidden on desktop) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+/* ========== HERO ========== */
+
+main.content {
+    margin: 0;
     padding: 0;
 }
 
@@ -46,197 +135,78 @@ main.content {
     justify-content: center;
     text-align: center;
     color: #ffffff;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.85)), url("Images/Hero.jpg") center 30% / cover no-repeat;
+    background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.85)),
+        url("Images/Hero.jpg") center 30% / cover no-repeat;
 }
 
-/* keep text from getting too wide */
 .hero-inner {
     max-width: 640px;
     margin: 0 1.5rem;
 }
 
-
-/* Top bar */ /* Section for the header/navigation bar */
-
-.top-bar { /* Container for logo, nav links, and hamburger */
-    display: flex; /* Uses flexbox to lay out children horizontally */
-    align-items: center; /*  */
-    justify-content: space-between; /* Pushes logo left and hamburger/nav right */
-    padding-top: 5rem; /* big space at the top */ /* Large top padding to drop header down */
-    padding-right: 1.5rem; /* Right padding inside the bar */
-    padding-bottom: 0.5rem; /* small space at the bottom */ /* Small bottom padding */
-    padding-left: 1.5rem; /* Left padding inside the bar */
-    background-color: var(--bg); /* Same background as page for seamless look */
-    border-bottom: 1px solid #2a3a4a; /* Thin bottom border line under the bar */
+.hero h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2.4rem;
 }
 
-
-/* Make nav sit in the middle area */
-.top-nav { /* Container for the top navigation links */
-    flex: 1; /* take up the space between logo and hamburger */ /* Lets nav grow to fill middle space */
-    display: flex; /* Lays out nav links in a row */
-    justify-content: center; /* centre links inside that space */ /* Centers the links horizontally */
+.hero-subtitle {
+    margin: 0 0 1.5rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
-.logo { /* Styles for the GRANT WALKER logo link */
-    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    /* Uses Roboto (or fallbacks) for logo text */
-    font-weight: 500; /* Medium */ /* Medium font weight (overridden by bold below) */
-    font-size: 2.5rem; /* Large font size for the logo */
-    font-weight: bold; /* Makes logo text bold */
-    color: var(--logo); /* Uses logo color variable (black) */
-    text-decoration: none; /* Removes underline from the logo link */
-    margin-right: 1rem; /* NEW: gap between logo and nav/hamburger */
-}
+/* ========== BUTTONS ========== */
 
-.logo img {
-    height: 100px;   /* tweak to suit */
-    width: auto;
-    display: block;
-}
-
-.top-nav a { /* Styles for each top navigation link */
-    color: var(--accent); /* Link text color set to black */
-    text-decoration: none; /* Removes default underline */
-    margin-left: 1rem; /* Adds space between each nav link */
-    font-size: 0.95rem; /* Slightly smaller than base font size */
-}
-
-    .top-nav a[aria-current="page"] { /* Style for the link representing current page */
-        color: var(--accent); /* Uses accent color to highlight current page link */
-    }
-
-    .top-nav a:hover { /* Hover state for nav links */
-        color: var(--accent); /* Changes color on hover for feedback */
-    }
-
-/* Hamburger button (for small screens) */
-
-.hamburger {
-    display: inline-flex; /* shrink-wrap to contents instead of stretching */
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 24px;
-    height: 18px; /* fixed, small height */
-    background: none;
+.primary-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    background-color: var(--button);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
     border: none;
-    padding: 0;
-    margin: 0;
     cursor: pointer;
 }
 
+.primary-button:hover {
+    background-color: var(--button-hover);
+}
 
-/* make sure the lines themselves are small */
-.top-bar .hamburger span {
+/* ========== SIDE NAV ========== */
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: -240px;
+    width: 220px;
+    height: 100vh;
+    background-color: var(--bg);
+    padding-top: 4rem;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.6);
+    transition: left 0.25s ease;
+    z-index: 1000;
+}
+
+.side-nav a {
     display: block;
-    width: 100%;
-    height: 3px;
-    background-color: var(--accent);
-    border-radius: 2px;
+    padding: 0.75rem 1.25rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.95rem;
 }
 
-/* Layout */
-
-.content { /* Main content wrapper */
-    max-width: 900px; /* Limits content width for better readability */
-    margin: 2rem auto; /* 2rem top/bottom margin, centered horizontally */
-    padding: 0 1rem; /* Horizontal padding inside the content area */
-    text-decoration: none; /* Ensures no unwanted text decoration inside */
+.side-nav a:hover {
+    background-color: var(--surface);
+    color: #ffffff;
 }
 
-.post { /* Card-style container for a post or hero section */
-    background-color: var(--surface); /* Uses surface color for the card background */
-    padding: 1.5rem; /* Inner spacing around content in the card */
-    border-radius: 6px; /* Slightly rounded corners of the card */
-    text-decoration: none; /* Removes text decoration if used on links */
-    text-align: center; /* Centers all text inside the post card */
-    margin-bottom: 1.5rem; /* space between boxes */ /* Space below card for stacking */
+.side-nav.open {
+    left: 0;
 }
 
-    .post h1 a { /* If the post title itself is a link */
-        color: var(--black); /* or #000000 */ /* Title link color set to black */
-        text-decoration: none; /* remove underline */ /* Removes underline from the title link */
-    }
-
-    .post h1 { /* Post title heading */
-        margin-top: 0; /* Removes extra top margin on the heading */
-        color: var(--accent); /* Uses accent color for the heading text */
-        text-decoration: none; /* Ensures heading text has no decoration */
-    }
-
-.meta { /* Meta text below titles, like date/author */
-    font-size: 0.85rem; /* Slightly smaller text size */
-    color: var(--muted); /* Uses muted color for low‑priority info */
-    text-decoration: none; /* Keeps meta text un-underlined */
-}
-
-/* Primary button */
-
-.primary-button { /* Styles for the main call‑to‑action button */
-    display: inline-block; /* Allows padding and margin like a block, but inline */
-    background-color: var(--button); /* Uses button color variable as background */
-    color: var(--bg); /* Button text color set to page background (light) */
-    text-decoration: none; /* Removes underline if used on an <a> tag */
-    border: none; /* No border outline */
-    padding: 0.75rem 1.5rem; /* Vertical and horizontal padding inside button */
-    border-radius: 4px; /* Slightly rounded button corners */
-    font-size: 1rem; /* Button text size equal to base size */
-    cursor: pointer; /* Pointer cursor on hover for clickability */
-}
-
-    .primary-button:hover { /* Hover state for the primary button */
-        background-color: var(--accent-soft); /* Darkens/changes button color on hover */
-    }
-
-/* Side nav (left drawer) */
-
-.side-nav { /* Sliding side navigation menu */
-    position: fixed; /* Fixed position so it stays in place on scroll */
-    top: 0; /* Aligns with top of the viewport */
-    left: -240px; /* Moves it off-screen to the left initially */
-    width: 220px; /* Width of the side navigation panel */
-    height: 100vh; /* Full viewport height for the drawer */
-    background-color: var(--bg); /* Background color matching page theme */
-    padding-top: 4rem; /* Space at the top inside the nav (below header) */
-    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.6); /* Adds shadow on right edge for depth */
-    transition: left 0.25s ease; /* Smooth slide-in/out animation using left property */
-    z-index: 1000; /* Places side nav above most other elements */
-}
-
-    .side-nav a { /* Individual links inside the side nav */
-        display: block; /* Each link takes the full width of the drawer */
-        padding: 0.75rem 1.25rem; /* Vertical and horizontal padding around link text */
-        color: var(--white); /* Side nav link text color */
-        text-decoration: none; /* Removes link underlines */
-        font-size: 0.95rem; /* Slightly smaller than base font size */
-    }
-
-        .side-nav a:hover { /* Hover state for side nav links */
-            background-color: var(--surface); /* Highlights link background on hover */
-        }
-
-    /* When open, slide in */
-
-    .side-nav.open { /* Side nav when “open” class is added via JS */
-        left: 0; /* Moves drawer into view from the left edge */
-    }
-
-
-.about { /* Styles for about-page text block */
-    white-space: pre-line; /* keep your blank lines & wraps text */ /* Preserves line breaks in text */
-    text-align: center; /* Centers about text horizontally */
-    letter-spacing: 1px; /* Slight extra spacing between letters */
-    /* or: white-space: pre-wrap;  // keeps all spaces too */ /* Alternative setting commented out */
-}
-
-.post img.post-cover {
-    width: 100%;
-    max-width: 350px;
-    display: block;
-    margin: 0 auto 1rem;
-    border-radius: 8px;
-}
+/* ========== FOOTER ========== */
 
 .site-footer {
     text-align: center;
@@ -244,88 +214,69 @@ main.content {
     background-color: var(--bg);
     color: var(--muted);
     font-size: 0.85rem;
-    border-top: 1px solid #2a3a4a;
+    border-top: 1px solid var(--border-subtle);
     line-height: 1.2;
 }
 
-    .site-footer p {
-        margin: 0;
-    }
-
-.top-bar-left {
-    display: flex;
-    flex-direction: column; /* stack logo and tagline vertically */
-    gap: 0.15rem; /* small space between them */
-}
-
-.tagline {
-    font-size: 0.8rem;
-    opacity: 0.75;
+.site-footer p {
     margin: 0;
 }
 
+/* ========== RESPONSIVE ========== */
 
-
-/* Responsive */ /* Section for responsive (small screen) styles */
-
-/* Responsive */
 @media (max-width: 768px) {
 
-    /* hide desktop nav on mobile */
-    .top-nav {
-        display: none;
-    }
-
-    /* tighter header on mobile */
     .top-bar {
-        padding-top: 1.5rem;
-        padding-bottom: 0.75rem;
-        align-items: center; /* keep everything vertically centered */
+        padding: 0.8rem 1rem;
     }
 
-    /* keep logo on one line and a bit smaller */
+    .top-bar-left {
+        gap: 0.35rem;
+    }
+
     .logo {
-        font-size: 2rem; /* smaller so it fits */
-        white-space: nowrap; /* don't wrap GRANT WALKER */
-        margin-right: 1rem; /* gap before hamburger */
+        font-size: 1.2rem;
+        white-space: nowrap;
     }
 
-    /* compact hamburger so it can't stretch */
+    .logo img {
+        height: 38px;
+    }
+
+    .tagline {
+        display: none; /* hide tagline on very small screens for space */
+    }
+
+    .top-nav {
+        display: none; /* hide desktop nav */
+    }
+
     .hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center; /* center the three lines */
-        width: 24px;
-        height: 18px; /* fixed small height */
-        background: none;
-        border: none;
-        padding: 0;
-        margin: 0;
+        display: flex; /* show hamburger */
     }
 
-    .top-bar .hamburger span {
-        width: 100%;
-        height: 3px;
-        background-color: #FFFFFF !important;
-        border-radius: 2px;
+    .hamburger span {
+        background-color: #ffffff;
     }
 
-    .content {
-        margin-top: 1rem;
+    .hero {
+        padding: 4.5rem 1.25rem 4rem;
     }
 
-    .side-nav a {
-        font-size: 1.1rem;
-    }
-
-    .post h1 {
+    .hero h1 {
         font-size: 2rem;
     }
 
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
     .primary-button {
-        font-size: 1.1rem;
-        padding: 1rem 2rem;
+        font-size: 1.05rem;
+        padding: 0.9rem 2rem;
+    }
+
+    .side-nav a {
+        font-size: 1.05rem;
     }
 }
-
