@@ -1,0 +1,104 @@
+<!-- https://greenroomelectrical.gwstudio.com.au/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+    <title>Greenroom Electrical</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="Styles.css" />
+
+    <!-- Fonts -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+    />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap"
+    />
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="top-bar">
+        <div class="top-bar-left">
+            <a href="./" class="logo">
+                <img src="greenroom-electrical.jpg" alt="Greenroom Electrical logo" />
+                <!---<span>Greenroom Electrical</span>
+            </a>
+            <p class="tagline">Your Local Electrician</p>
+            --->
+        </div>
+
+        <nav class="top-nav">
+            <a href="./" aria-current="page">Home</a>
+            <a href="posts.html">Deals</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- MOBILE SIDE NAV -->
+    <aside class="side-nav" id="sideNav">
+        <a href="./">Home</a>
+        <a href="posts.html">Deals</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+    </aside>
+
+    <!-- HERO -->
+    <main class="content home-page">
+        <section class="hero">
+            <div class="hero-inner">
+                <h1>Greenroom Electrical</h1>
+                <p class="hero-subtitle">
+                    Local Electrician in the Tweed Heads · Goldcoast Area.
+                    Specialising in Safety Switch Testing and Switchboard Compliance
+                </p>
+                <div class="hero-actions">
+                    <a class="primary-button" href="posts.html">View Current Deals</a>
+                    <p class="hero-secondary">Call or text Grant for more information on 0451 992 486.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>© 2026 Greenroom Electrical · All rights reserved.</p>
+    </footer>
+
+    <!-- NAV SCRIPT -->
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const sideNav = document.getElementById("sideNav");
+
+        hamburger.addEventListener("click", (event) => {
+            event.stopPropagation();
+            sideNav.classList.toggle("open");
+        });
+
+        sideNav.addEventListener("click", (event) => {
+            if (event.target === sideNav) {
+                sideNav.classList.remove("open");
+            }
+            event.stopPropagation();
+        });
+
+        document.addEventListener("click", () => {
+            sideNav.classList.remove("open");
+        });
+    </script>
+</body>
+</html>
