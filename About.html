@@ -1,119 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
     <meta charset="UTF-8" />
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About · Greenroom Electrical</title>
-
-    <!-- Main stylesheet -->
+    <meta name="description" content="Greenroom Electrical is a licensed residential electrician in Tweed Heads and the Gold Coast, focused on safety and compliance." />
+    <link rel="canonical" href="https://greenroomelectrical.gwstudio.com.au/About.html" />
+    <meta name="theme-color" content="#0b1410" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Greenroom Electrical" />
+    <meta property="og:title" content="About · Greenroom Electrical" />
+    <meta property="og:description" content="Greenroom Electrical is a licensed residential electrician in Tweed Heads and the Gold Coast, focused on safety and compliance." />
+    <meta property="og:url" content="https://greenroomelectrical.gwstudio.com.au/About.html" />
+    <meta property="og:image" content="https://greenroomelectrical.gwstudio.com.au/greenroom-electrical.jpg" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" />
     <link rel="stylesheet" href="Styles.css" />
-
-    <!-- Fonts -->
-    <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-    />
-    <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap"
-    />
 </head>
-
 <body>
-    <!-- HEADER -->
-    <header class="top-bar">
-        <div class="top-bar-left">
-            <a href="./" class="logo">
-                <img src="greenroom-electrical.jpg" alt="Greenroom Electrical logo" />
-                <!---<span>Greenroom Electrical</span>
+    <header class="topbar">
+        <div class="wrap">
+            <a class="brand" href="./" aria-label="Greenroom Electrical home">
+                <img src="images/mark-white.svg" alt="" width="72" height="30" />
+                <span class="brand-name">Greenroom <span>Electrical</span></span>
             </a>
-            <p class="tagline">Your Local Electrician</p>
-                --->
-        </div>
-
-        <nav class="top-nav">
-            <a href="./">Home</a>
+            <nav class="site-nav" id="siteNav" aria-label="Site">
+            <a href="./#services">Services</a>
             <a href="posts.html">Deals</a>
             <a href="About.html" aria-current="page">About</a>
             <a href="Contact.html">Contact</a>
-        </nav>
-
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            </nav>
+            <div class="spacer"></div>
+            <a class="btn primary sm call-btn" href="tel:0451992486" aria-label="Call 0451 992 486"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span class="lbl">0451 992 486</span></a>
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </div>
     </header>
 
-    <!-- MOBILE SIDE NAV -->
-    <aside class="side-nav" id="sideNav">
-        <a href="./">Home</a>
-        <a href="posts.html">Deals</a>
-        <a href="About.html">About</a>
-        <a href="Contact.html">Contact</a>
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <main class="content about-page">
-        <section class="about-card">
-            <header class="about-header">
-                <h1>About Greenroom Electrical</h1>
-                <p>Grant is your local electrician providing services with a focus on safety and compliance.</p>
-            </header>
-
-            <div class="about-body">
-                <p>
-                    Grant from Greenroom Electrical is based in the Tweed Heads / Goldcoast Area,
-                    providing residential electrical services. Greenroom specialises in Safety Switch testing and switch board 
-                    compliance checks.
-                </p>
-
-                <p>
-                    All work is installed, tested to the Australian Standard and a certificate of testing and compliance with results
-                    is provided to the client on job sign off.
-                </p>
-
-                <p>
-                    If you’d like to discuss a project or organise a quotation, get in touch and we’ll
-                    find a time that suits you.
-                </p>
+    <main>
+        <section class="page-head">
+            <div class="wrap">
+                <p class="eyebrow">About</p>
+                <h1>Local, licensed and focused on safety.</h1>
+                <p>Greenroom Electrical provides residential electrical services across the Tweed Heads and Gold Coast area.</p>
             </div>
+        </section>
 
-            <div class="about-actions">
-                <a class="primary-button" href="Contact.html">Contact Grant</a>
-                <a class="about-link" href="posts.html">View Current Deals</a>
+        <section class="section">
+            <div class="wrap narrow prose">
+                <h2>Who's behind it</h2>
+                <p>Greenroom Electrical is run by Grant Walker, a licensed electrician based in the Tweed Heads / Gold Coast area. Greenroom specialises in safety switch testing and switchboard compliance checks, and also takes on everyday jobs around the home: LED conversions, ceiling fans, switches and powerpoints, test and tag, and smart lighting.</p>
+
+                <h2>How we work</h2>
+                <div class="grid cols-3">
+                    <article class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v12H8l-4 4z"/><path d="M8 9h8M8 12.5h5"/></svg></div>
+                        <h3>Quote first</h3>
+                        <p>A formal quotation before any works begin.</p>
+                    </article>
+                    <article class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+                        <h3>Tested to standard</h3>
+                        <p>All work is installed and tested to the Australian Standard.</p>
+                    </article>
+                    <article class="card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg></div>
+                        <h3>Certified</h3>
+                        <p>A certificate of testing and compliance, with results, on job sign-off.</p>
+                    </article>
+                </div>
+
+                <h2>Licence and registration</h2>
+                <dl class="details">
+                    <div><dt>QLD Contractor Licence</dt><dd>88296</dd></div>
+                    <div><dt>ABN</dt><dd>81 848 968 209</dd></div>
+                </dl>
+
+                <h2>Get in touch</h2>
+                <p>If you'd like to discuss a project or organise a quotation, call or text Grant on <a href="tel:0451992486">0451 992 486</a> or email <a href="mailto:greenroom@gwstudio.com.au">greenroom@gwstudio.com.au</a>, and we'll find a time that suits you.</p>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="wrap">
+                <div>
+                    <h2>Need an electrician?</h2>
+                    <p>Call or text Grant for a free, no-obligation quote.</p>
+                </div>
+                <div class="actions">
+                    <a class="btn light" href="tel:0451992486"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call 0451 992 486</a>
+                    <a class="btn outline-dark" href="mailto:greenroom@gwstudio.com.au"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Email us</a>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer">
-        <p>© 2026 Greenroom Electrical · All rights reserved.</p>
-        <p>QLD Contractor Licence No. 88296 · ABN 81 848 968 209</p>
+        <div class="wrap">
+            <div class="footer-top">
+                <div>
+                    <img src="images/logo-white.svg" alt="Greenroom Electrical" width="84" height="64" />
+                    <p>Residential electrical services in the Tweed Heads and Gold Coast area, specialising in safety switch testing and switchboard compliance.</p>
+                </div>
+                <div>
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="./">Home</a></li>
+                        <li><a href="./#services">Services</a></li>
+                        <li><a href="posts.html">Deals</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:0451992486">0451 992 486</a></li>
+                        <li><a href="mailto:greenroom@gwstudio.com.au">greenroom@gwstudio.com.au</a></li>
+                        <li>Tweed Heads / Gold Coast</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Greenroom Electrical · All rights reserved.</p>
+                <p>QLD Contractor Licence No. 88296 · ABN 81 848 968 209</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- NAV SCRIPT -->
     <script>
-        const hamburger = document.getElementById("hamburger");
-        const sideNav = document.getElementById("sideNav");
-
-        hamburger.addEventListener("click", (event) => {
-            event.stopPropagation();
-            sideNav.classList.toggle("open");
+        const toggle = document.getElementById("navToggle");
+        const nav = document.getElementById("siteNav");
+        toggle.addEventListener("click", () => {
+            const open = nav.classList.toggle("open");
+            toggle.setAttribute("aria-expanded", String(open));
+            toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
         });
-
-        sideNav.addEventListener("click", (event) => {
-            if (event.target === sideNav) {
-                sideNav.classList.remove("open");
-            }
-            event.stopPropagation();
-        });
-
-        document.addEventListener("click", () => {
-            sideNav.classList.remove("open");
+        nav.addEventListener("click", (e) => {
+            if (e.target.closest("a")) { nav.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); }
         });
     </script>
 </body>

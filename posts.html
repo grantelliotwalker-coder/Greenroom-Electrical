@@ -1,143 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
     <meta charset="UTF-8" />
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deals · Greenroom Electrical</title>
-
-    <!-- Main stylesheet -->
+    <meta name="description" content="Fixed-price safety switch testing, switchboard checks and smoke alarm compliance packages in Tweed Heads and the Gold Coast." />
+    <link rel="canonical" href="https://greenroomelectrical.gwstudio.com.au/posts.html" />
+    <meta name="theme-color" content="#0b1410" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Greenroom Electrical" />
+    <meta property="og:title" content="Deals · Greenroom Electrical" />
+    <meta property="og:description" content="Fixed-price safety switch testing, switchboard checks and smoke alarm compliance packages in Tweed Heads and the Gold Coast." />
+    <meta property="og:url" content="https://greenroomelectrical.gwstudio.com.au/posts.html" />
+    <meta property="og:image" content="https://greenroomelectrical.gwstudio.com.au/greenroom-electrical.jpg" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" />
     <link rel="stylesheet" href="Styles.css" />
-
-    <!-- Fonts -->
-    <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-    />
-    <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap"
-    />
 </head>
-
 <body>
-    <!-- HEADER -->
-    <header class="top-bar">
-        <div class="top-bar-left">
-            <a href="./" class="logo">
-                <img src="greenroom-electrical.jpg" alt="Greenroom Electrical logo" />
-                <!--<span>Greenroom Electrical</span>
+    <header class="topbar">
+        <div class="wrap">
+            <a class="brand" href="./" aria-label="Greenroom Electrical home">
+                <img src="images/mark-white.svg" alt="" width="72" height="30" />
+                <span class="brand-name">Greenroom <span>Electrical</span></span>
             </a>
-            <p class="tagline">Your Local Electrician</p>
-                --->
-        </div>
-
-        <nav class="top-nav">
-            <a href="./">Home</a>
+            <nav class="site-nav" id="siteNav" aria-label="Site">
+            <a href="./#services">Services</a>
             <a href="posts.html" aria-current="page">Deals</a>
             <a href="About.html">About</a>
             <a href="Contact.html">Contact</a>
-        </nav>
-
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            </nav>
+            <div class="spacer"></div>
+            <a class="btn primary sm call-btn" href="tel:0451992486" aria-label="Call 0451 992 486"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span class="lbl">0451 992 486</span></a>
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </div>
     </header>
 
-    <!-- MOBILE SIDE NAV -->
-    <aside class="side-nav" id="sideNav">
-        <a href="./">Home</a>
-        <a href="posts.html">Deals</a>
-        <a href="About.html">About</a>
-        <a href="Contact.html">Contact</a>
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <main class="content deals-page">
-        <header class="deals-header">
-            <h1>Current Deals</h1>
-            <p>See below for services we provide</p>
-        </header>
-
-        <!-- DEAL CARD 1 -->
-        <article class="post deal-card">
-            <h2>Safety Switch Testing</h2>
-            <p class="meta">$150</p>
-            <div class="deal-body">
-                <ul>
-                    <li>Replace existing halogen downlights with energy‑efficient LEDs.</li>
-                    <li>Includes labour, standard fittings, and safety check.</li>
-                    <li>Perfect for living areas, kitchens, and hallways.</li>
-                </ul>
-                <a class="primary-button" href="Contact.html">Enquire Now</a>
+    <main>
+        <section class="page-head">
+            <div class="wrap">
+                <p class="eyebrow">Deals</p>
+                <h1>Current deals</h1>
+                <p>Fixed-price packages for the most common safety and compliance jobs.</p>
             </div>
-        </article>
+        </section>
 
-        <!-- DEAL CARD 2 -->
-        <article class="post deal-card">
-            <h2>Switchboard Check</h2>
-            <p class="meta">From $249 · Single‑phase homes</p>
-            <div class="deal-body">
-                <ul>
-                    <li>Test existing safety switches and circuit protection.</li>
-                    <li>Visual inspection of wiring condition and labelling.</li>
-                    <li>Simple recommendations to bring your switchboard up to standard.</li>
-                </ul>
-                <a class="primary-button" href="Contact.html">Book Inspection</a>
+        <section class="section">
+            <div class="wrap">
+                <div class="grid cols-3">
+                    <article class="card price-card">
+                        <h3>Safety Switch Testing</h3>
+                        <p class="price">$150</p>
+                        <p class="meta">Fixed price</p>
+                        <ul>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Every safety switch (RCD) in the home tested for trip time and function.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Results recorded, with a certificate of testing provided.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Clear advice on anything that fails or needs attention.</span></li>
+                        </ul>
+                        <a class="btn outline sm" href="Contact.html">Enquire now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    </article>
+                    <article class="card price-card">
+                        <h3>Switchboard Check</h3>
+                        <p class="price"><small>From</small>$249</p>
+                        <p class="meta">Single-phase homes</p>
+                        <ul>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Test existing safety switches and circuit protection.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Visual inspection of wiring condition and labelling.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Simple recommendations to bring your switchboard up to standard.</span></li>
+                        </ul>
+                        <a class="btn outline sm" href="Contact.html">Book inspection<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    </article>
+                    <article class="card price-card">
+                        <h3>Smoke Alarm Compliance Package</h3>
+                        <p class="price"><small>From</small>$299</p>
+                        <p class="meta">Owner-occupied homes</p>
+                        <ul>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Supply and install compliant photoelectric smoke alarms.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Positioning to suit current regulations and best practice.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Testing and demonstration so you know everything is working.</span></li>
+                        </ul>
+                        <a class="btn outline sm" href="Contact.html">Get compliant<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    </article>
+                </div>
+                <p class="fine">Pricing excludes GST. You'll receive a formal quotation before any works begin.</p>
             </div>
-        </article>
+        </section>
 
-        <!-- DEAL CARD 3 -->
-        <article class="post deal-card">
-            <h2>Smoke Alarm Compliance Package</h2>
-            <p class="meta">From $299 · Owner‑occupied homes</p>
-            <div class="deal-body">
-                <ul>
-                    <li>Supply and install compliant photoelectric smoke alarms.</li>
-                    <li>Positioning to suit current regulations and best practice.</li>
-                    <li>Testing and demonstration so you know everything is working.</li>
-                </ul>
-                <a class="primary-button" href="Contact.html">Get Compliant</a>
+        <section class="cta">
+            <div class="wrap">
+                <div>
+                    <h2>Need an electrician?</h2>
+                    <p>Call or text Grant for a free, no-obligation quote.</p>
+                </div>
+                <div class="actions">
+                    <a class="btn light" href="tel:0451992486"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call 0451 992 486</a>
+                    <a class="btn outline-dark" href="mailto:greenroom@gwstudio.com.au"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Email us</a>
+                </div>
             </div>
-        </article>
-
-        <section class="deals-note">
-            <p>
-                Pricing excludes gst 
-                You’ll receive a formal quotation before any works begin.
-            </p>
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer">
-        <p>© 2026 Greenroom Electrical · All rights reserved.</p>
-        <p>QLD Contractor Licence No. 88296 · ABN 81 848 968 209</p>
+        <div class="wrap">
+            <div class="footer-top">
+                <div>
+                    <img src="images/logo-white.svg" alt="Greenroom Electrical" width="84" height="64" />
+                    <p>Residential electrical services in the Tweed Heads and Gold Coast area, specialising in safety switch testing and switchboard compliance.</p>
+                </div>
+                <div>
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="./">Home</a></li>
+                        <li><a href="./#services">Services</a></li>
+                        <li><a href="posts.html">Deals</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:0451992486">0451 992 486</a></li>
+                        <li><a href="mailto:greenroom@gwstudio.com.au">greenroom@gwstudio.com.au</a></li>
+                        <li>Tweed Heads / Gold Coast</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Greenroom Electrical · All rights reserved.</p>
+                <p>QLD Contractor Licence No. 88296 · ABN 81 848 968 209</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- NAV SCRIPT -->
     <script>
-        const hamburger = document.getElementById("hamburger");
-        const sideNav = document.getElementById("sideNav");
-
-        hamburger.addEventListener("click", (event) => {
-            event.stopPropagation();
-            sideNav.classList.toggle("open");
+        const toggle = document.getElementById("navToggle");
+        const nav = document.getElementById("siteNav");
+        toggle.addEventListener("click", () => {
+            const open = nav.classList.toggle("open");
+            toggle.setAttribute("aria-expanded", String(open));
+            toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
         });
-
-        sideNav.addEventListener("click", (event) => {
-            if (event.target === sideNav) {
-                sideNav.classList.remove("open");
-            }
-            event.stopPropagation();
-        });
-
-        document.addEventListener("click", () => {
-            sideNav.classList.remove("open");
+        nav.addEventListener("click", (e) => {
+            if (e.target.closest("a")) { nav.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); }
         });
     </script>
 </body>

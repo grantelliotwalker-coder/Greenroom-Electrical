@@ -40,6 +40,11 @@
     <Content Include="Contact.html" />
     <Content Include="posts.html" />
     <Content Include="index.html" />
+    <Content Include="404.html" />
+    <Content Include="favicon.svg" />
+    <Content Include="images\logo-white.svg" />
+    <Content Include="images\logo-green.svg" />
+    <Content Include="images\mark-white.svg" />
     <Content Include="Home.html" />
     <Content Include="Styles.css" />
   </ItemGroup>
