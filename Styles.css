@@ -58,10 +58,10 @@ a:hover { color: var(--green-strong); }
     position: sticky;
     top: 0;
     z-index: 30;
-    background: color-mix(in srgb, var(--ink) 92%, transparent);
+    background: rgba(255, 255, 255, 0.94);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--ink-border);
+    border-bottom: 1px solid var(--border);
 }
 
 .topbar .wrap {
@@ -75,7 +75,7 @@ a:hover { color: var(--green-strong); }
     display: flex;
     align-items: center;
     gap: 12px;
-    color: #fff;
+    color: var(--text);
     text-decoration: none;
     font-weight: 700;
     font-size: 17px;
@@ -83,23 +83,23 @@ a:hover { color: var(--green-strong); }
     white-space: nowrap;
 }
 
-.brand:hover { color: #fff; }
+.brand:hover { color: var(--text); }
 .brand img { height: 30px; width: auto; }
-.brand span { color: var(--green-bright); }
+.brand span { color: var(--green); }
 
 .site-nav { display: flex; gap: 4px; }
 
 .site-nav a {
     padding: 8px 12px;
     border-radius: 8px;
-    color: var(--on-dark-dim);
+    color: var(--text-dim);
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
 }
 
-.site-nav a:hover { color: #fff; background: var(--ink-3); }
-.site-nav a[aria-current="page"] { color: #fff; }
+.site-nav a:hover { color: var(--text); background: var(--bg); }
+.site-nav a[aria-current="page"] { color: var(--green); font-weight: 600; }
 
 .topbar .spacer { flex: 1; }
 
@@ -108,9 +108,9 @@ a:hover { color: var(--green-strong); }
     width: 42px;
     height: 42px;
     border-radius: 8px;
-    border: 1px solid var(--ink-border);
+    border: 1px solid var(--border-strong);
     background: transparent;
-    color: #fff;
+    color: var(--text);
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -161,9 +161,9 @@ a:hover { color: var(--green-strong); }
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(900px 420px at 80% -10%, rgba(62, 207, 142, 0.16), transparent 70%),
-        linear-gradient(var(--ink), var(--ink-2));
-    color: var(--on-dark);
+        radial-gradient(900px 420px at 85% -10%, rgba(0, 104, 53, 0.09), transparent 70%),
+        linear-gradient(#ffffff, var(--bg));
+    color: var(--text);
     padding: 96px 0 104px;
 }
 
@@ -172,8 +172,8 @@ a:hover { color: var(--green-strong); }
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+        linear-gradient(rgba(0, 60, 30, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 60, 30, 0.05) 1px, transparent 1px);
     background-size: 48px 48px;
     mask-image: linear-gradient(180deg, transparent, #000 30%, #000 70%, transparent);
     -webkit-mask-image: linear-gradient(180deg, transparent, #000 30%, #000 70%, transparent);
@@ -197,7 +197,7 @@ a:hover { color: var(--green-strong); }
     color: var(--green);
 }
 
-.hero .eyebrow, .dark .eyebrow { color: var(--green-bright); }
+
 
 .hero h1 {
     margin: 0 0 20px;
@@ -205,7 +205,7 @@ a:hover { color: var(--green-strong); }
     line-height: 1.04;
     letter-spacing: -0.035em;
     font-weight: 800;
-    color: #fff;
+    color: var(--text);
     text-wrap: balance;
 }
 
@@ -213,7 +213,7 @@ a:hover { color: var(--green-strong); }
     margin: 0 0 32px;
     max-width: 560px;
     font-size: 19px;
-    color: var(--on-dark-dim);
+    color: var(--text-dim);
     text-wrap: pretty;
 }
 
@@ -227,17 +227,18 @@ a:hover { color: var(--green-strong); }
     padding: 0;
     list-style: none;
     font-size: 14px;
-    color: var(--on-dark-dim);
+    color: var(--text-dim);
 }
 
 .ticks li { display: flex; align-items: center; gap: 8px; }
-.ticks svg { width: 16px; height: 16px; color: var(--green-bright); }
+.ticks svg { width: 16px; height: 16px; color: var(--green); }
 
 .hero-card {
-    background: rgba(255, 255, 255, 0.98);
+    background: #ffffff;
+    border: 1px solid var(--border);
     border-radius: 18px;
     padding: 36px 36px 30px;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 24px 60px rgba(16, 40, 28, 0.10);
     color: var(--text);
 }
 
@@ -377,38 +378,43 @@ a:hover { color: var(--green-strong); }
 .checklist svg { width: 22px; height: 22px; color: var(--green); flex-shrink: 0; margin-top: 1px; }
 
 .area-panel {
-    background: var(--ink);
-    color: var(--on-dark);
+    background: #eef6f1;
+    border: 1px solid #d3e5da;
+    color: var(--text);
     border-radius: 18px;
     padding: 36px;
 }
 
-.area-panel h3 { margin: 0 0 6px; font-size: 22px; color: #fff; letter-spacing: -0.02em; }
-.area-panel p { margin: 0 0 22px; color: var(--on-dark-dim); }
+.area-panel h3 { margin: 0 0 6px; font-size: 22px; color: var(--text); letter-spacing: -0.02em; }
+.area-panel p { margin: 0 0 22px; color: var(--text-dim); }
 .area-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
-.area-list li { padding: 7px 12px; border: 1px solid var(--ink-border); border-radius: 999px; font-size: 14px; color: var(--on-dark); background: var(--ink-2); }
+.area-list li { padding: 7px 12px; border: 1px solid #d3e5da; border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--text); background: #ffffff; }
 
 /* ---------- CTA band ---------- */
 
 .cta {
     padding: 80px 0;
     background:
-        radial-gradient(700px 300px at 15% 120%, rgba(62, 207, 142, 0.18), transparent 70%),
-        var(--ink);
-    color: var(--on-dark);
+        radial-gradient(700px 300px at 15% 120%, rgba(0, 104, 53, 0.10), transparent 70%),
+        #eef6f1;
+    border-top: 1px solid #d3e5da;
+    color: var(--text);
 }
 
 .cta .wrap { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
-.cta h2 { margin: 0 0 8px; font-size: clamp(28px, 3.6vw, 38px); letter-spacing: -0.03em; line-height: 1.1; color: #fff; }
-.cta p { margin: 0; color: var(--on-dark-dim); font-size: 17px; }
+.cta h2 { margin: 0 0 8px; font-size: clamp(28px, 3.6vw, 38px); letter-spacing: -0.03em; line-height: 1.1; color: var(--text); }
+.cta p { margin: 0; color: var(--text-dim); font-size: 17px; }
 
 /* ---------- Page header (inner pages) ---------- */
 
 .page-head {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(var(--ink), var(--ink-2));
-    color: var(--on-dark);
+    background:
+        radial-gradient(800px 360px at 90% -20%, rgba(0, 104, 53, 0.09), transparent 70%),
+        linear-gradient(#ffffff, var(--bg));
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
     padding: 72px 0 64px;
 }
 
@@ -417,8 +423,8 @@ a:hover { color: var(--green-strong); }
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        linear-gradient(rgba(0, 60, 30, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 60, 30, 0.05) 1px, transparent 1px);
     background-size: 48px 48px;
     mask-image: linear-gradient(90deg, transparent, #000 60%);
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 60%);
@@ -426,9 +432,9 @@ a:hover { color: var(--green-strong); }
 }
 
 .page-head .wrap { position: relative; }
-.page-head .eyebrow { color: var(--green-bright); }
-.page-head h1 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 52px); line-height: 1.06; letter-spacing: -0.035em; font-weight: 800; color: #fff; text-wrap: balance; }
-.page-head p { margin: 0; max-width: 640px; font-size: 19px; color: var(--on-dark-dim); }
+
+.page-head h1 { margin: 0 0 14px; font-size: clamp(36px, 5vw, 52px); line-height: 1.06; letter-spacing: -0.035em; font-weight: 800; color: var(--text); text-wrap: balance; }
+.page-head p { margin: 0; max-width: 640px; font-size: 19px; color: var(--text-dim); }
 
 /* ---------- Prose (About) ---------- */
 
@@ -460,9 +466,9 @@ a.contact-card:hover { border-color: var(--green); transform: translateY(-2px); 
 /* ---------- Footer ---------- */
 
 .site-footer {
-    background: var(--ink);
-    color: var(--on-dark-dim);
-    border-top: 1px solid var(--ink-border);
+    background: #ffffff;
+    color: var(--text-dim);
+    border-top: 1px solid var(--border);
     padding: 56px 0 32px;
     font-size: 14px;
 }
@@ -472,15 +478,15 @@ a.contact-card:hover { border-color: var(--green); transform: translateY(-2px); 
     grid-template-columns: 1.4fr 1fr 1fr;
     gap: 40px;
     padding-bottom: 36px;
-    border-bottom: 1px solid var(--ink-border);
+    border-bottom: 1px solid var(--border);
 }
 
 .footer-top img { height: 64px; width: auto; margin-bottom: 14px; }
 .footer-top p { margin: 0; max-width: 320px; }
-.footer-top h4 { margin: 0 0 12px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; }
+.footer-top h4 { margin: 0 0 12px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
 .footer-top ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
-.site-footer a { color: var(--on-dark-dim); text-decoration: none; }
-.site-footer a:hover { color: #fff; }
+.site-footer a { color: var(--text-dim); text-decoration: none; }
+.site-footer a:hover { color: var(--green); }
 
 .footer-bottom {
     display: flex;
@@ -521,12 +527,13 @@ a.contact-card:hover { border-color: var(--green); transform: translateY(-2px); 
         flex-direction: column;
         gap: 0;
         padding: 8px 16px 16px;
-        background: var(--ink);
-        border-bottom: 1px solid var(--ink-border);
+        background: #ffffff;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 12px 24px rgba(16, 24, 20, 0.08);
     }
 
     .site-nav.open { display: flex; }
-    .site-nav a { padding: 14px 12px; font-size: 16px; border-bottom: 1px solid var(--ink-border); border-radius: 0; }
+    .site-nav a { padding: 14px 12px; font-size: 16px; border-bottom: 1px solid var(--border); border-radius: 0; }
 
     .hero { padding: 64px 0 72px; }
     .hero .lead { font-size: 17px; }
@@ -535,4 +542,12 @@ a.contact-card:hover { border-color: var(--green); transform: translateY(-2px); 
     .details { grid-template-columns: 1fr; }
     .area-panel, .hero-card { padding: 28px 24px; }
     .actions .btn { flex: 1 1 auto; }
+}
+
+/* Eyebrow labels keep their size and colour inside section and page heads */
+.section-head .eyebrow,
+.page-head .eyebrow {
+    margin: 0 0 16px;
+    font-size: 13px;
+    color: var(--green);
 }

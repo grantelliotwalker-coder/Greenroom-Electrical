@@ -45,6 +45,7 @@
     <Content Include="images\logo-white.svg" />
     <Content Include="images\logo-green.svg" />
     <Content Include="images\mark-white.svg" />
+    <Content Include="images\mark-green.svg" />
     <Content Include="Home.html" />
     <Content Include="Styles.css" />
   </ItemGroup>
